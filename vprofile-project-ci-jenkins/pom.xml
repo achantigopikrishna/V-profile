@@ -20,6 +20,8 @@
         <logback.version>1.1.3</logback.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <sonar.host.url>http://44.204.145.140:9000</sonar.host.url>
+        <sonar.login>squ_3f68359e746f0832363ce2a8f1fef08027449e11</sonar.login>
     </properties>
 
     <dependencies>
@@ -119,7 +121,19 @@
     		<scope>test</scope>
 		</dependency>
     </dependencies>
+       <distributionmanagement>
+	       <repository>
+		       <id>nexus</id>
+		       <name>vr-release</name>
+		       <url>http://18.204.230.58:8081/repository/vr-release/</url>
+	       </repository>
 
+	       <snapshotrepository>
+		       <id>nexus</name>
+		       <name>vr-snapshot</name>
+		       <url>http://18.204.230.58:8081/repository/vr-snapshot/</url>
+		 </snapshotrepository>
+	 <distributionmanagement>
     <build>
         <plugins>
             <plugin>
